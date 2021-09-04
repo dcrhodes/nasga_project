@@ -8,9 +8,11 @@ class Game(models.Model):
   address = models.CharField(max_length=100)
   year = models.IntegerField()
   date = models.DateField('Competition Date')
-  organizer = models.CharField(max_length=100)
-  contact = models.CharField(max_length=100)
-  description = models.TextField(max_length=1000)
+  organizer = models.CharField(max_length=100, blank=True)
+  contact = models.CharField(max_length=100, blank=True)
+  website = models.CharField(max_length=100, blank=True)
+  facebook = models.CharField(max_length=100, blank=True)
+  description = models.TextField(max_length=1000, blank=True)
 
   def __str__(self):
     return self.name
