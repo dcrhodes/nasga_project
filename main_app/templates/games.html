@@ -2,22 +2,18 @@
 
 {% block content %}
   <h1>Games Index</h1>
-  <a href='/games/create/'>Add a Game</a>
+  <a href='/games/create/'>Add a Game</a><br><br><hr><br>
 
 <p>
   {% for game in games %}
     <div>
-      {{game.name}}<br><br>
+      <b>{{game.name}}</b><br><br>
       
-      {{game.date}}, {{game.year}}<br><br>
+      <i>{{game.city}}, {{game.state}}</i><br><br>
 
-      {{game.address}}<br>
-      {{game.city}}, {{game.state}}<br><br>
+      {{game.date}}<br><br>
 
-      {{game.organizer}}<br>
-      {{game.contact}}<br><br>
-
-      {{game.description}}
+      <a href="{% url 'gamesdetail' game.id %}">More Details</a><br><br><hr><br>
 
     </div>
   {% endfor %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Games Index</h1>
+  <a href='/games/create/'>Add a Game</a>
+
+<p>
+  {% for game in games %}
+    <div>
+      {{game.name}}<br><br>
+      
+      {{game.date}}, {{game.year}}<br><br>
+
+      {{game.address}}<br>
+      {{game.city}}, {{game.state}}<br><br>
+
+      {{game.organizer}}<br>
+      {{game.contact}}<br><br>
+
+      {{game.description}}<br><br><hr><br>
+
+    </div>
+  {% endfor %}
+</p>
+
+{% endblock %}
