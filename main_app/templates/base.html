@@ -13,14 +13,74 @@
   </title>
 </head>
 <body>
-<header>
+
+
+
+
+
+<!-- component -->
+<link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+
+<div class="min-h-screen flex flex-row bg-gray-100">
+  <div class="flex flex-col w-56 bg-white rounded-r-xl overflow-hidden shadow-lg">
+    <div class="flex items-center justify-center h-20 shadow-md">
+      <h1 class="text-5xl font-bold text-green-600" id="navtitle">NASGA</h1>
+    </div>
+    <ul class="flex flex-col py-4">
+      <li>
+        <a href="#" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-home"></i></span>
+          <span class="text-sm font-medium">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-library"></i></span>
+          <span class="text-sm font-medium">About</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-calendar"></i></span>
+          <span class="text-sm font-medium">Games</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-user"></i></span>
+          <span class="text-sm font-medium">Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-log-out"></i></span>
+          <span class="text-sm font-medium">Logout</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="">
+  
+  
+    <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+  
+  
+  </div>
+</div>
 
 
 
 
 
 
-<nav>
+
+
+
+
+{% comment %} <nav>
     <ul>
       {% if user.is_authenticated %}
         <li><a href="{% url 'home' %}">Home</a></li>
@@ -34,11 +94,7 @@
         <li><a href="{% url 'home' %}">Login</a></li>
       {% endif %}
     </ul>
-  </nav>
-</header>
-  <main>
-    {% block content %}
-    {% endblock %}
-  </main>
+  </nav> {% endcomment %}
+
 </body>
 </html>

@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Games Index</h1>
 
-  {% if user.is_authenticated %}
+  {% comment %} {% if user.is_authenticated %}
     <a href='{% url 'games_create' %}'>Add a Game</a><br><br><hr><br>
   {% endif %}
 
@@ -19,15 +18,15 @@
       <a href="{% url 'games_detail' game.id %}">Details</a><br><br><hr><br>
 
     </div>
-  {% endfor %}
+  {% endfor %} {% endcomment %}
 
 
 
 
-<main class="flex flex-row w-full min-h-screen bg-green-200 items-center justify-evenly">
+<main class="flex flex-row flex-wrap w-full min-h-screen bg-green-200 items-center justify-evenly">
   {% for game in games %}
-    <div class="rounded-lg">
-        <div class="bg-gray-100 rounded-lg w-96">
+    <div class="rounded-lg" id="gamecard">
+        <div class="bg-gray-100 rounded-lg w-96" >
             <img src="https://unsplash.it/640/425" alt=""
                 class="w-full h-48 transition duration-300 rounded-t-lg sm:h-56 opacity-80 hover:opacity-100" />
 
