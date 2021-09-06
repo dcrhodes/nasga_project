@@ -1,5 +1,46 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
-  <h1>About Page</h1>
+
+
+<div class="flex flex-row w-full h-full">
+  <div class="flex flex-col justify-center items-center w-full bg-gray-50">
+    <div class="flex flex-col m-32">
+  <p class="my-5">
+    The story of the Highland Games is a colorful story of sports, culture and community, a celebration of the heritage and history of Scotland and the Scottish Highlands.
+  </p>
+  <p class="my-5">
+    Highland Games are thought to have originated from the great gatherings and fairs held by Scottish Highland clans since medieval times, where the clans would compete against each other in feats of strength and skill.  The clan chieftains would select their strongest, fastest and fittest warriors to represent the clan on the field of honor. Some say that the Games even date back to 2000 BC in Ireland, before they crossed the water to Scotland with the fourth and fifth century migrations of the Scotti into Argyll and beyond.
+  </p>
+  <p class="my-5">
+    The modern Games are a mix of field and track events, piping, and Highland dance as well as 'heavy events' like the tug-o-war or the hammer throw and the caber-toss.  The program is remarkably unchanged since those early medieval clan gatherings.
+  </p>
+  <p class="my-5">
+    So what are some of these ancient games of skill and strength?  There’s the “tossing of ye bar”, or caber tossing, wherein a long tapered pine pole is balanced and then tossed, turning end over end,  larger end hitting the ground first in as perfect a 12 0’clock position as possible – called “turning the caber”.  There’s the stone put - not unlike the shot put in the Olympics, except that a large stone, up to 26 pounds, is used!  There is the one-handed weight-for-distance throw, featuring a metal weight up to 56 pounds on a chain – longest throw wins.  Or the sheaf toss, where a 20 pound straw bundle is tossed over a high raised bar with a pitchfork.
+  </p>
+  <p class="my-5">
+    The Games have always celebrated Highland culture with its poets and bards, music and dance as well as its sports. Dancing, piping, fiddling, and playing the Gaelic harp are all part of the Games, usually with a competitive element.  Clan chieftains use to pit their pipers against those of other clans, and enormous prestige came with victory.  And no Games are complete without the unforgettable massing of the pipe bands with their tartans swirling to open and close the event.
+  </p>
+</div>
+  </div>
+  <div class="overflow-hidden min-w-max">
+    <img src="{% static 'images/action4.jpeg' %}" class="opacity-90 hover:opacity-100 object-cover h-full">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
 {% endblock %}

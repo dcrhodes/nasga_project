@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
-#navtitle {
+@font-face {
+  font-family: 'stonecrossregular';
+  src: url('../fonts/st______-webfont.woff2') format('woff2'),
+       url('../fonts/st______-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+html {
+  background-image: "main_app/static/images/background1.jpeg";
+}
+
+.celtfont {
   font-family: 'MedievalSharp', cursive;
+}
+
+#navtitle {
+  font-family: 'stonecrossregular';
+}
+
+#jumbo {
+  background-image: url("../images/background2.jpeg");
 }

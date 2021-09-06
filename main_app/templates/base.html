@@ -7,94 +7,67 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
   <title>
     NASGA
   </title>
 </head>
-<body>
-
-
-
-
-
-<!-- component -->
-<link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
-
-<div class="min-h-screen flex flex-row bg-gray-100">
-  <div class="flex flex-col w-56 bg-white rounded-r-xl overflow-hidden shadow-lg">
-    <div class="flex items-center justify-center h-20 shadow-md">
-      <h1 class="text-5xl font-bold text-green-600" id="navtitle">NASGA</h1>
+<body class="h-screen flex flex-col">
+{% comment %} Nav Bar {% endcomment %}
+  <div class="flex flex-row bg-yellow-50 overflow-hidden shadow-lg">
+    <div class="flex items-center justify-center h-20 shadow-md bg-yellow-300">
+      <h1 class="text-5xl font-bold text-yellow-700 mx-6" id="navtitle">NASGA</h1>
     </div>
-    <ul class="flex flex-col py-4">
-      <li>
-        <a href="#" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
-          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-home"></i></span>
-          <span class="text-sm font-medium">Home</span>
+    <ul class="flex flex-row justify-evenly py-4 w-full">
+      <li class="border-b-2 hover:border-gray-800">
+        <a href="{% url 'home' %}" class="flex flex-row items-center h-12 text-gray-500 hover:text-gray-800 hover:border-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-500">
+            <i class="bx bx-home"></i>
+          </span>
+          <span class="text-lg font-medium mr-4">
+            Home
+          </span>
         </a>
       </li>
-      <li>
-        <a href="#" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+      <li class="border-b-2 hover:border-gray-800">
+        <a href="{% url 'about' %}" class="flex flex-row items-center h-12  text-gray-500 hover:text-gray-800">
           <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-library"></i></span>
-          <span class="text-sm font-medium">About</span>
+          <span class="text-lg font-medium mr-4">History</span>
         </a>
       </li>
-      <li>
-        <a href="#" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+      <li class="border-b-2 hover:border-gray-800">
+        <a href="{% url 'games' %}" class="flex flex-row items-center h-12  text-gray-500 hover:text-gray-800">
           <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-calendar"></i></span>
-          <span class="text-sm font-medium">Games</span>
+          <span class="text-lg font-medium mr-4">Games</span>
         </a>
       </li>
-      <li>
-        <a href="#" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+      <li class="border-b-2 hover:border-gray-800">
+        <a href="#" class="flex flex-row items-center h-12  text-gray-500 hover:text-gray-800">
           <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-user"></i></span>
-          <span class="text-sm font-medium">Profile</span>
+          <span class="text-lg font-medium mr-4">Profile</span>
         </a>
       </li>
-      <li>
-        <a href="#" class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
-          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-log-out"></i></span>
-          <span class="text-sm font-medium">Logout</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="">
-  
-  
-    <main>
-    {% block content %}
-    {% endblock %}
-  </main>
-  
-  
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-{% comment %} <nav>
-    <ul>
       {% if user.is_authenticated %}
-        <li><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="{% url 'games' %}">Games</a></li>
-        <li><a href="{% url 'logout' %}">Log Out</a></li>
+      <li class="border-b-2 hover:border-gray-800">
+        <a href="{% url 'logout' %}" class="flex flex-row items-center h-12  text-gray-500 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-log-out"></i></span>
+          <span class="text-lg font-medium mr-4">Logout</span>
+        </a>
+      </li>
       {% else %}
-        <li><a href="{% url 'home' %}">Home</a></li>
-        <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="{% url 'games' %}">Games</a></li>
-        <li><a href="{% url 'home' %}">Login</a></li>
+      <li class="border-b-2 hover:border-gray-800">
+        <a href="{% url 'home' %}" class="flex flex-row items-center h-12 text-gray-500 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400 "><i class="bx bx-log-in"></i></span>
+          <span class="text-lg font-medium mr-4">Login</span>
+        </a>
+      </li>
       {% endif %}
     </ul>
-  </nav> {% endcomment %}
-
+  </div>
+  
+    {% block content %}
+    {% endblock %}
+  
 </body>
 </html>

@@ -1,8 +1,25 @@
 {% extends 'base.html' %}
 
-{% block content %}
-  <h1>Home Page</h1>
+{% load static %}
 
+{% block content %}
+
+<div class="h-full bg-cover flex flex-col items-center" id='jumbo'>
+  <div class="w-2/4 bg-gray-50 opacity-40 mt-52 p-12 hover:opacity-60">
+    <p class="text-center italic text-xl font-semibold leading-9">Welcome to the North American Scottish Games Association!</p><br>
+    <p class="text-center italic text-lg leading-9"><u>NASGA</u> was founded in 1976 and is dedicated to the promotion and understanding of Scottish Heavy Events competition in North America and to inform athletes, judges, officials, and all other interested persons of news and results of Scottish Highland Games held throughout North America.</p>
+  </div>
+  <div class="bg-gray-50 border-4 border-yellow-300 opacity-70 mt-52 rounded-full py-3 px-6 hover:opacity-80 text-2xl">
+    <a href="">
+      Game Button
+    </a>
+  </div>
+</div>
+
+
+
+
+{% comment %} 
 {% if user.is_authenticated %}
 <div class="">You are logged in!</div>
 {% else %}
@@ -15,6 +32,8 @@
     <button type="submit">Login</button>
   </form>
 </section>
-{% endif %}
+{% endif %} 
+{% endcomment %}
+
 
 {% endblock %}
