@@ -15,51 +15,59 @@
 </head>
 <body class="h-screen flex flex-col">
 {% comment %} Nav Bar {% endcomment %}
-  <div class="flex flex-row bg-yellow-50 overflow-hidden shadow-lg">
-    <div class="flex items-center justify-center h-20 shadow-md bg-yellow-300">
-      <h1 class="text-5xl font-bold text-yellow-700 mx-6" id="navtitle">NASGA</h1>
+  <div class="sticky w-screen flex flex-row bg-yellow-400 opacity-80 overflow-hidden shadow-lg h-20">
+    <div class="flex items-center justify-center bg-yellow-400">
+      <h1 class="text-5xl font-bold text-red-600 mx-6" id="navtitle">NASGA</h1>
     </div>
     <ul class="flex flex-row justify-evenly py-4 w-full">
-      <li class="border-b-2 hover:border-gray-800">
-        <a href="{% url 'home' %}" class="flex flex-row items-center h-12 text-gray-500 hover:text-gray-800 hover:border-gray-800">
-          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-500">
+      <li class="border-b-2 border-transparent hover:border-gray-800">
+        <a href="{% url 'home' %}" class="flex flex-row items-center h-12 text-yellow-800 hover:text-gray-800 hover:border-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-xl text-red-600">
             <i class="bx bx-home"></i>
           </span>
-          <span class="text-lg font-medium mr-4">
+          <span class="text-xl mr-4 font-semibold">
             Home
           </span>
         </a>
       </li>
-      <li class="border-b-2 hover:border-gray-800">
-        <a href="{% url 'about' %}" class="flex flex-row items-center h-12  text-gray-500 hover:text-gray-800">
-          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-library"></i></span>
-          <span class="text-lg font-medium mr-4">History</span>
+      <li class="border-b-2 border-transparent hover:border-gray-800">
+        <a href="{% url 'about' %}" class="flex flex-row items-center h-12  text-yellow-800 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-xl text-red-600"><i class="bx bx-library"></i></span>
+          <span class="text-xl font-medium mr-4">History</span>
         </a>
       </li>
-      <li class="border-b-2 hover:border-gray-800">
-        <a href="{% url 'games' %}" class="flex flex-row items-center h-12  text-gray-500 hover:text-gray-800">
-          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-calendar"></i></span>
-          <span class="text-lg font-medium mr-4">Games</span>
+      <li class="border-b-2 border-transparent hover:border-gray-800">
+        <a href="{% url 'sport' %}" class="flex flex-row items-center h-12  text-yellow-800 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-xl text-red-600"><i class="bx bx-award"></i></span>
+          <span class="text-xl font-medium mr-4">Learn the Sport</span>
         </a>
       </li>
-      <li class="border-b-2 hover:border-gray-800">
-        <a href="#" class="flex flex-row items-center h-12  text-gray-500 hover:text-gray-800">
-          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-user"></i></span>
-          <span class="text-lg font-medium mr-4">Profile</span>
+      <li class="border-b-2 border-transparent hover:border-gray-800">
+        <a href="{% url 'games' %}" class="flex flex-row items-center h-12  text-yellow-800 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-xl text-red-600"><i class="bx bx-calendar"></i></span>
+          <span class="text-xl font-medium mr-4">
+            Find Games
+          </span>
+        </a>
+      </li>
+      <li class="border-b-2 border-transparent hover:border-gray-800">
+        <a href="#" class="flex flex-row items-center h-12  text-yellow-800 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-xl text-red-600"><i class="bx bx-user"></i></span>
+          <span class="text-xl font-medium mr-4">Profile</span>
         </a>
       </li>
       {% if user.is_authenticated %}
-      <li class="border-b-2 hover:border-gray-800">
-        <a href="{% url 'logout' %}" class="flex flex-row items-center h-12  text-gray-500 hover:text-gray-800">
-          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i class="bx bx-log-out"></i></span>
-          <span class="text-lg font-medium mr-4">Logout</span>
+      <li class="border-b-2 border-transparent hover:border-gray-800">
+        <a href="{% url 'logout' %}" class="flex flex-row items-center h-12  text-yellow-800 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-xl text-red-600"><i class="bx bx-log-out"></i></span>
+          <span class="text-xl font-medium mr-4">Logout</span>
         </a>
       </li>
       {% else %}
-      <li class="border-b-2 hover:border-gray-800">
-        <a href="{% url 'home' %}" class="flex flex-row items-center h-12 text-gray-500 hover:text-gray-800">
-          <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400 "><i class="bx bx-log-in"></i></span>
-          <span class="text-lg font-medium mr-4">Login</span>
+      <li class="border-b-2 border-transparent hover:border-gray-800">
+        <a href="{% url 'home' %}" class="flex flex-row items-center h-12 text-yellow-800 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-xl text-red-600 "><i class="bx bx-log-in"></i></span>
+          <span class="text-xl font-medium mr-4">Login</span>
         </a>
       </li>
       {% endif %}

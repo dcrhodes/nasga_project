@@ -7,6 +7,9 @@ from .models import Game
 class Home(LoginView):
   template_name = 'home.html'
 
+def sport(request):
+  return render(request, 'sport.html')
+
 def about(request):
   return render(request, 'about.html')
 

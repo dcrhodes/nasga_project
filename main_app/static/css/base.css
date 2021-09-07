@@ -17,6 +17,10 @@ html {
   font-family: 'MedievalSharp', cursive;
 }
 
+.stonefont {
+  font-family: 'stonecrossregular';
+}
+
 #navtitle {
   font-family: 'stonecrossregular';
 }
@@ -24,3 +28,13 @@ html {
 #jumbo {
   background-image: url("../images/background2.jpeg");
 }
+
+#flagbutton {
+  background-image: url("../images/flagpin2.png");
+  background-position: center;
+}
+
+#aboutscroll {
+  overflow-y: scroll;
+}
+

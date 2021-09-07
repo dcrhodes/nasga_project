@@ -27,10 +27,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tailwind',
-    'app',
 ]
 
-TAILWIND_APP_NAME ='app'
+TAILWIND_APP_NAME ='main_app'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
