@@ -15,7 +15,7 @@
 </head>
 <body class="h-screen flex flex-col">
 {% comment %} Nav Bar {% endcomment %}
-  <div class="sticky w-screen flex flex-row bg-yellow-400 opacity-80 overflow-hidden shadow-lg h-20">
+  <div class="sticky w-screen flex flex-row bg-yellow-400 opacity-80 shadow-lg h-20">
     <div class="flex items-center justify-center bg-yellow-400">
       <h1 class="text-5xl font-bold text-red-600 mx-6" id="navtitle">NASGA</h1>
     </div>
@@ -39,14 +39,14 @@
       <li class="border-b-2 border-transparent hover:border-gray-800">
         <a href="{% url 'sport' %}" class="flex flex-row items-center h-12  text-yellow-800 hover:text-gray-800">
           <span class="inline-flex items-center justify-center h-12 w-12 text-xl text-red-600"><i class="bx bx-award"></i></span>
-          <span class="text-xl font-medium mr-4">Learn the Sport</span>
+          <span class="text-xl font-medium mr-4">Sport Details</span>
         </a>
       </li>
       <li class="border-b-2 border-transparent hover:border-gray-800">
         <a href="{% url 'games' %}" class="flex flex-row items-center h-12  text-yellow-800 hover:text-gray-800">
           <span class="inline-flex items-center justify-center h-12 w-12 text-xl text-red-600"><i class="bx bx-calendar"></i></span>
           <span class="text-xl font-medium mr-4">
-            Find Games
+            Find Events
           </span>
         </a>
       </li>

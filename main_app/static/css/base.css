@@ -34,7 +34,6 @@ html {
   background-position: center;
 }
 
-#aboutscroll {
-  overflow-y: scroll;
+.heightMinusNav {
+  height: calc(100% - 5rem);
 }
-
