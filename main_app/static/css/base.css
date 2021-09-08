@@ -85,3 +85,7 @@ html {
 #id_name, #id_state, #id_city, #id_address, #id_year, #id_date, #id_organizer, #id_contact, #id_website, #id_facebook, #id_description {
   border: 1px solid rgb(182, 177, 177);
 }
+
+#id_name:hover, #id_state:hover, #id_city:hover, #id_address:hover, #id_year:hover, #id_date:hover, #id_organizer:hover, #id_contact:hover, #id_website:hover, #id_facebook:hover, #id_description:hover {
+  border: 1px solid rgb(0, 0, 0);
+}

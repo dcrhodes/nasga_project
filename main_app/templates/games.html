@@ -13,14 +13,14 @@
 {% if user.is_authenticated %}
   <div class=" flex flex-row justify-center">
     <a href='{% url 'games_create' %}'>
-      <div class="rounded-full py-3 px-6 w-32 shadow-2xl border-2 bg-yellow-600 text-white hover:border-yellow-500 text-center mt-8">
+      <div class="rounded-full py-3 px-6 w-32 shadow-2xl border-2 border-blue-100 bg-yellow-600 text-white hover:border-yellow-500 text-center mt-8">
             Add Event
       </div>
     </a>
   </div>
 {% else %}
 <div class=" flex flex-row justify-center">
-    <a href='{% url 'register' %}'>
+    <a href='{% url 'login' %}'>
       <div class="rounded-full py-3 px-6 shadow-2xl border-2 bg-yellow-600 text-white hover:border-yellow-500 text-center mt-8">
             Login as an organizer to add/update events.
       </div>
@@ -30,7 +30,7 @@
 
   <div class="w-screen flex flex-row flex-wrap items-center justify-evenly">
   {% for game in games %}
-    <div class="rounded-lg shadow-2xl my-10 mx-4 border">
+    <div class="rounded-lg shadow-2xl my-10 mx-4 border hover:border-yellow-400">
         <div class="bg-gray-100 rounded-lg w-72">
             <img src="{% static 'images/cardimg.jpeg' %}" alt=""
                 class="w-full h-48 transition duration-300 rounded-t-lg sm:h-56 opacity-80 hover:opacity-100"/>

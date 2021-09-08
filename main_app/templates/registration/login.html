@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="">
+  <section class="flex flex-col items-center">
+    <form  
+      method="post" 
+      class="border w-2/5 mt-20">
+      <h1>Login</h1>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="hidden" name="next" value="{{ next }}">
+      <button type="submit" class="btn submit">Login</button>
+    </form>
+    <div>
+    New User? Register <a href="{% url 'signup' %}">here</a>
+    </div>
+  </section>
+</div>
+
+{% endblock %}
