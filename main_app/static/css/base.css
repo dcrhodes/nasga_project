@@ -38,6 +38,16 @@ html {
   background-position: center;
 }
 
+#gamesbg {
+  background-image: url("../images/background5.jpeg");
+  background-position: center;
+}
+
+#formbg {
+  background-image: url("../images/background3.jpeg");
+  background-position: center;
+}
+
 .heightMinusNav {
   height: calc(100% - 5rem);
 }
@@ -75,4 +85,3 @@ html {
 #id_name, #id_state, #id_city, #id_address, #id_year, #id_date, #id_organizer, #id_contact, #id_website, #id_facebook, #id_description {
   border: 1px solid rgb(182, 177, 177);
 }
-

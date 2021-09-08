@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<div class="bg-blue-300 heightMinusNav bg-cover" id="formbg">
 <div class="flex flex-row justify-center mt-40">
-  <form action="" method="post" class="form-container flex flex-col items-center bg-gray-100 p-10">
+  <form action="" method="post" class="form-container flex flex-col items-center bg-gray-100 p-10 opacity-80 hover:opacity-90 rounded">
     <div class="text-xl mb-10 font-semibold">Add Event</div>
     {% csrf_token %}
     <table class="">
       {{ form.as_table }}
     </table>
-    <button type="submit" class="btn submit border-2 rounded-full py-3 px-6 mt-6">Submit!</button>
+    <button type="submit" class="btn submit border-2 border-green-600 rounded-full py-3 px-6 mt-6 shadow-2xl hover:shadow-none hover:border-yellow-400">Submit!</button>
   </form>
+</div>
 </div>
 
 {% endblock %}
