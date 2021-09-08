@@ -1,28 +1,41 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Games Detail</h1>
-  <a href="{% url 'games_update' game.id %}">Edit Game</a><br>
-  <a href="{% url 'games_delete' game.id %}">Delete Game</a><br><br><hr>
 
-<p>
-    <div>
-      {{game.name}}<br><br>
-      
-      {{game.date}}<br><br>
-
-      {{game.address}}<br>
-      {{game.city}}, {{game.state}}<br><br>
-
-      {{game.organizer}}<br>
-      {{game.contact}}<br><br>
-
-      {{game.website}}<br>
-      {{game.facebook}}<br><br>
-
-      {{game.description}}<br><br><hr><br>
-
+<div class="heightMinusNav flex flex-col items-center bg-cover" id="detailsbg">
+  <div class="w-2/4 mt-20 text-center flex-col bg-gray-50 opacity-80 hover:opacity-90 rounded">
+    <div class="my-5 text-2xl font-semibold">
+      {{game.name}}<br>
+      {{game.date}}
     </div>
-</p>
+    <div class="my-5 text-lg">
+      {{game.address}}<br>
+      {{game.city}}, {{game.state}}
+    </div>
+    <div class="my-5 text-lg">
+      {{game.organizer}}<br>
+      <a class="text-blue-600 hover:text-blue-400 underline" href="mailto:{{game.contact}}">{{game.contact}}</a>
+    </div>
+    <div class="my-5 text-lg">
+      <a class="text-blue-600 hover:text-blue-400 underline" href="{{game.website}}">Official Website</a><br>
+      <a class="text-blue-600 hover:text-blue-400 underline" href="{{game.facebook}}">Facebook</a>
+    </div>
+    <div class="my-5 mx-10 text-lg leading-8 italic">
+      {{game.description}}
+    </div>
+    <div class="flex flex-row my-10 justify-center">
+      <a href="{% url 'games_update' game.id %}" class="">
+        <div class="rounded-full py-3 px-6 w-24 shadow-inner border-2 border-red-600   hover:border-yellow-500 mr-10 text-center">
+          Edit
+        </div>
+      </a>
+        <a href="{% url 'games_delete' game.id %}" class="">
+          <div class="rounded-full py-3 px-6 w-24 shadow-inner border-2 border-red-600   hover:border-yellow-500 text-center">
+            Delete
+          </div>
+        </a>
+    </div>
+  </div>
+</div>
 
 {% endblock %}

@@ -3,6 +3,7 @@ from django.contrib.auth.views import LoginView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
 from .models import Game
+from . import forms, models
 
 class Home(LoginView):
   template_name = 'home.html'
@@ -12,6 +13,9 @@ def sport(request):
 
 def about(request):
   return render(request, 'about.html')
+
+def register(request):
+  return render(request, 'register.html')
 
 def games(request):
   games = Game.objects.all()
@@ -39,3 +43,5 @@ class GameUpdate(UpdateView):
 class GameDelete(DeleteView):
   model = Game
   success_url = '/games/'
+
+  

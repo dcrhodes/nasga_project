@@ -2,18 +2,27 @@
 
 {% block content %}
 
-<div>
-  <h1>Delete Game?</h1>
+<div class="heightMinusNav flex flex-col items-center bg-cover" id="detailsbg">
+  <div class="w-2/4 mt-20 text-center flex-col bg-gray-50 opacity-80 hover:opacity-90 rounded">
+    <div class="my-5 text-2xl">
+      Are you sure you want to delete {{ object.name }}?
+    </div>
+    <form action="" method="post" class="form">
+      {% csrf_token %}
+      <div class="flex flex-row my-10 justify-center"> 
+        <button type="submit">
+          <div class="rounded-full py-3 px-6 w-24 shadow-inner border-2 border-red-600   hover:border-yellow-500 mr-10 text-center">
+            Confirm
+          </div>
+        </button>
+        <a href="{% url 'games_detail' game.id %}">
+          <div class="rounded-full py-3 px-6 w-24 shadow-inner border-2 border-red-600   hover:border-yellow-500 mr-10 text-center">
+            Cancel
+          </div>
+        </a>
+      </div>
+    </form>
+  </div>
 </div>
-<h2>Are you sure you want to delete {{ object.name }}?</h2>
-
-<form action="" method="post" class="form">
-  {% csrf_token %}
-  <a href="{% url 'games_detail' game.id %}">
-  Cancel
-  </a>
-  <button type="submit">Yes - Delete!</button>
-</form>
-
 
 {% endblock %}

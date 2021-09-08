@@ -5,40 +5,20 @@
 {% block content %}
 
 <div class="h-full bg-cover flex flex-col items-center" id='jumbo'>
-  <div class="w-2/4 bg-gray-50 opacity-40 mt-52 p-12 hover:opacity-60">
+  <div class="w-2/4 bg-gray-50 opacity-50 mt-52 p-12 hover:opacity-60 rounded">
     <p class="text-center italic text-xl font-semibold leading-9">Welcome to the North American Scottish Games Association!</p><br>
     <p class="text-center italic text-lg leading-9"><u>NASGA</u> was founded in 1976 and is dedicated to the promotion and understanding of Scottish Heavy Events competition in North America and to inform athletes, judges, officials, and all other interested persons of news and results of Scottish Highland Games held throughout North America.</p>
   </div>
   <div class="bg-gray-50 border-4 border-yellow-300 opacity-70 mt-48 rounded-full hover:opacity-90">
-    <div class="rounded-full w-72 h-40 flex items-center justify-center overflow-hidden" id="flagbutton">
-      <div class="text-4xl stonefont text-red-600">
+    <div class="rounded-full w-72 h-40 flex items-center justify-center overflow-hidden text-red-600 hover:text-red-500" id="flagbutton">
+      <div class="text-4xl stonefont ">
         <a href="{% url 'games' %}" class="">
-          GAMES
+          FIND EVENTS
         </a>
       </div>
       
     </div>
   </div>
 </div>
-
-
-
-
-{% comment %} 
-{% if user.is_authenticated %}
-<div class="">You are logged in!</div>
-{% else %}
-<section>
-  <form action="{% url 'home' %}" method="post">
-    <h1>Login</h1>
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="hidden" name="next" value="{{ next }}">
-    <button type="submit">Login</button>
-  </form>
-</section>
-{% endif %} 
-{% endcomment %}
-
 
 {% endblock %}

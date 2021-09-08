@@ -29,6 +29,10 @@ html {
   background-image: url("../images/background2.jpeg");
 }
 
+#detailsbg {
+  background-image: url("../images/background1.jpeg");
+}
+
 #flagbutton {
   background-image: url("../images/flagpin2.png");
   background-position: center;
@@ -37,3 +41,38 @@ html {
 .heightMinusNav {
   height: calc(100% - 5rem);
 }
+
+#caber:target {
+  background: #fccc5d;
+  padding: 10px;
+}
+
+#stone:target {
+  background: #fccc5d;
+  padding: 10px;
+}
+
+#wfd:target {
+  background: #fccc5d;
+  padding: 10px;
+}
+
+#hammer:target {
+  background: #fccc5d;
+  padding: 10px;
+}
+
+#wob:target {
+  background: #fccc5d;
+  padding: 10px;
+}
+
+#sheaf:target {
+  background: #fccc5d;
+  padding: 10px;
+}
+
+#id_name, #id_state, #id_city, #id_address, #id_year, #id_date, #id_organizer, #id_contact, #id_website, #id_facebook, #id_description {
+  border: 1px solid rgb(182, 177, 177);
+}
+

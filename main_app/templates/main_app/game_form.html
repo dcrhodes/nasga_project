@@ -2,12 +2,15 @@
 
 {% block content %}
 
-<form action="" method="post" class="form-container">
+<div class="flex flex-row justify-center mt-40">
+  <form action="" method="post" class="form-container flex flex-col items-center bg-gray-100 p-10">
+    <div class="text-xl mb-10 font-semibold">Add Event</div>
     {% csrf_token %}
-    <table>
+    <table class="">
       {{ form.as_table }}
     </table>
-  <button type="submit" class="btn submit">Submit!</button>
-</form>
+    <button type="submit" class="btn submit border-2 rounded-full py-3 px-6 mt-6">Submit!</button>
+  </form>
+</div>
 
 {% endblock %}
