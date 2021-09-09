@@ -119,3 +119,6 @@ LOGIN_REDIRECT_URL = '/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DEBUG_PROPAGATE_EXCEPTIONS = True
+
+import django_heroku
+django_heroku.settings(locals())
