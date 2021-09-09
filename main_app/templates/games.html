@@ -4,10 +4,6 @@
 
 {% block content %}
 
-
-
-
-
 <main class="bg-blue-300 bg-cover h-full w-full" id="gamesbg">
 
 {% if user.is_authenticated %}
@@ -30,10 +26,10 @@
 
   <div class="w-screen flex flex-row flex-wrap items-center justify-evenly">
   {% for game in games %}
-    <div class="rounded-lg shadow-2xl my-10 mx-4 border hover:border-yellow-400">
+    <div class="rounded-lg shadow-2xl my-10 mx-4 border-2 hover:border-yellow-400">
         <div class="bg-gray-100 rounded-lg w-72">
             <img src="{% static 'images/cardimg.jpeg' %}" alt=""
-                class="w-full h-48 transition duration-300 rounded-t-lg sm:h-56 opacity-80 hover:opacity-100"/>
+                class="w-full h-48 transition duration-300 rounded-t-lg sm:h-56 opacity-100"/>
             <div class="px-10 py-4 text-center">
               <div class="mb-4 text-2xl text-purple-600 uppercase celtfont h-20 items-center flex items center justify-center">
                 <div>{{game.name}}</div>
