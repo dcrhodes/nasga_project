@@ -52,40 +52,37 @@ html {
   height: calc(100% - 5rem);
 }
 
-#caber:target {
-  background: #fccc5d;
-  padding: 10px;
-}
-
-#stone:target {
-  background: #fccc5d;
-  padding: 10px;
-}
-
-#wfd:target {
-  background: #fccc5d;
-  padding: 10px;
-}
-
-#hammer:target {
-  background: #fccc5d;
-  padding: 10px;
-}
-
-#wob:target {
-  background: #fccc5d;
-  padding: 10px;
-}
-
+#caber:target,
+#stone:target,
+#wfd:target,
+#hammer:target,
+#wob:target,
 #sheaf:target {
-  background: #fccc5d;
+  display: block;
   padding: 10px;
 }
 
-#id_name, #id_state, #id_city, #id_address, #id_year, #id_date, #id_organizer, #id_contact, #id_website, #id_facebook, #id_description {
+#caber,
+#stone,
+#wfd,
+#hammer,
+#wob,
+#sheaf {
+  display: none;
+  padding: 10px;
+  background: #fdff78;
+
+}
+
+#id_name, #id_state, #id_city, #id_address, #id_year, #id_date, #id_organizer, #id_contact, #id_website, #id_facebook, #id_description, 
+
+#id_username, #id_password, #id_password1, #id_password2 {
   border: 1px solid rgb(182, 177, 177);
 }
 
-#id_name:hover, #id_state:hover, #id_city:hover, #id_address:hover, #id_year:hover, #id_date:hover, #id_organizer:hover, #id_contact:hover, #id_website:hover, #id_facebook:hover, #id_description:hover {
+#id_name:hover, #id_state:hover, #id_city:hover, #id_address:hover, #id_year:hover, #id_date:hover, #id_organizer:hover, #id_contact:hover, #id_website:hover, #id_facebook:hover, #id_description:hover, 
+
+#id_username:hover, #id_password:hover, #id_password1:hover, #id_password2:hover {
   border: 1px solid rgb(0, 0, 0);
 }
+

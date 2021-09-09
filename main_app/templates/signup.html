@@ -6,28 +6,29 @@
 
 <div class="heightMinusNav bg-cover" id="formbg">
   <section class="flex flex-col items-center ">
+    <div class="bg-gray-50 opacity-80 mt-20 rounded p-5">
+      <div class="flex flex-row justify-center mb-5 text-2xl font-semibold">
+        <div>Sign Up</div>
+      </div>
 
-<div class="bg-gray-50 opacity-80 mt-20 rounded p-5">
-    <div class="flex flex-row justify-center mb-5 text-2xl font-semibold">
-      <div>Sign Up</div>
+      {% if error_message %}
+      <p class="red-text">{{ error_message }}</p>
+      {% endif %}
+
+      <form action="" method="post" class="form-container" autocomplete="off">
+        {% csrf_token %}
+        <table>
+          {{ form.as_table }}
+        </table>
+        <div class=" flex flex-row justify-center">
+          <button type="submit" class="btn submit">
+            <div class="rounded-full py-3 px-6 w-24 shadow-2xl hover:shadow-none border-2 border-red-600 hover:border-yellow-500 flex flex-row justify-center my-3">
+              <div class="">Submit</div>
+            </div>
+          </button>
+        </div>
+      </form>
     </div>
-{% if error_message %}
-  <p class="red-text">{{ error_message }}</p>
-{% endif %}
-<form action="" method="post" class="form-container" autocomplete="off">
-  {% csrf_token %}
-  <table>
-    {{ form.as_table }}
-  </table>
-  <button type="submit" class="btn submit">
-    <div>
-      Submit!
-    </div>
-  </button>
-</form>
-</div>
-
-
   </section>
 </div>
 
