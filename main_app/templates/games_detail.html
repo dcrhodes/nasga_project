@@ -17,12 +17,23 @@
       <a class="text-blue-600 hover:text-blue-400 underline" href="mailto:{{game.contact}}">{{game.contact}}</a>
     </div>
     <div class="my-5 text-lg">
+
+      {% if game.website %}
       <a class="text-blue-600 hover:text-blue-400 underline" href="{{game.website}}">Official Website</a><br>
+      {% endif %}
+
+      {% if game.faceboook %}
       <a class="text-blue-600 hover:text-blue-400 underline" href="{{game.facebook}}">Facebook</a>
+      {% endif %}
+
     </div>
+    {% if game.description %}
     <div class="my-5 mx-10 text-lg leading-8 italic">
       {{game.description}}
     </div>
+    {% endif %}
+
+    {% if user.is_authenticated %}
     <div class="flex flex-row my-10 justify-center">
       <a href="{% url 'games_update' game.id %}" class="">
         <div class="rounded-full py-3 px-6 w-24 shadow-inner border-2 border-red-600   hover:border-yellow-500 mr-10 text-center">
@@ -35,6 +46,7 @@
           </div>
         </a>
     </div>
+    {% endif %}
   </div>
 </div>
 
