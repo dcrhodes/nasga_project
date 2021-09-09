@@ -33,6 +33,14 @@
           </span>
         </a>
       </li>
+            <li class="border-b-2 border-transparent hover:border-gray-800">
+        <a href="{% url 'games' %}" class="flex flex-row items-center h-12  text-yellow-800 hover:text-gray-800">
+          <span class="inline-flex items-center justify-center h-12 w-12 text-xl text-red-600"><i class="bx bx-calendar"></i></span>
+          <span class="text-xl font-medium mr-4">
+            Find Events
+          </span>
+        </a>
+      </li>
       <li class="border-b-2 border-transparent hover:border-gray-800">
         <a href="{% url 'about' %}" class="flex flex-row items-center h-12  text-yellow-800 hover:text-gray-800">
           <span class="inline-flex items-center justify-center h-12 w-12 text-xl text-red-600"><i class="bx bx-library"></i></span>
@@ -45,20 +53,14 @@
           <span class="text-xl font-medium mr-4">Sport Details</span>
         </a>
       </li>
-      <li class="border-b-2 border-transparent hover:border-gray-800">
-        <a href="{% url 'games' %}" class="flex flex-row items-center h-12  text-yellow-800 hover:text-gray-800">
-          <span class="inline-flex items-center justify-center h-12 w-12 text-xl text-red-600"><i class="bx bx-calendar"></i></span>
-          <span class="text-xl font-medium mr-4">
-            Find Events
-          </span>
-        </a>
-      </li>
+      {% comment %} 
       <li class="border-b-2 border-transparent hover:border-gray-800">
         <a href="#" class="flex flex-row items-center h-12  text-yellow-800 hover:text-gray-800">
           <span class="inline-flex items-center justify-center h-12 w-12 text-xl text-red-600"><i class="bx bx-user"></i></span>
           <span class="text-xl font-medium mr-4">Profile</span>
         </a>
-      </li>
+      </li> 
+      {% endcomment %}
       {% if user.is_authenticated %}
       <li class="border-b-2 border-transparent hover:border-gray-800">
         <a href="{% url 'logout' %}" class="flex flex-row items-center h-12  text-yellow-800 hover:text-gray-800">

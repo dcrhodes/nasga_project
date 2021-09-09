@@ -4,10 +4,13 @@
 
 {% block content %}
 
-<div class="page-header">
-  <h1>Sign Up</h1>
-  <img src="{% static 'images/nerd-cat.svg' %}" alt="A cat using a computer"/>
-</div>
+<div class="heightMinusNav bg-cover" id="formbg">
+  <section class="flex flex-col items-center ">
+
+<div class="bg-gray-50 opacity-80 mt-20 rounded p-5">
+    <div class="flex flex-row justify-center mb-5 text-2xl font-semibold">
+      <div>Sign Up</div>
+    </div>
 {% if error_message %}
   <p class="red-text">{{ error_message }}</p>
 {% endif %}
@@ -16,7 +19,17 @@
   <table>
     {{ form.as_table }}
   </table>
-  <button type="submit" class="btn submit">Submit!</button>
+  <button type="submit" class="btn submit">
+    <div>
+      Submit!
+    </div>
+  </button>
 </form>
+</div>
+
+
+  </section>
+</div>
+
 
 {% endblock %}
