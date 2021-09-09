@@ -70,8 +70,7 @@ html {
 #sheaf {
   display: none;
   padding: 10px;
-  background: #fdff78;
-
+  border: 1px gray solid;
 }
 
 #id_name, #id_state, #id_city, #id_address, #id_year, #id_date, #id_organizer, #id_contact, #id_website, #id_facebook, #id_description, 
