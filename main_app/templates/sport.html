@@ -2,11 +2,15 @@
 
 {% load static %}
 
+{% block head %}
+<script defer src="{% static 'js/sport.js' %}"></script>
+{% endblock %}
+
 {% block content %}
 
 <div class="flex flex-row heightMinusNav">
   <div class="min-w-max">
-    <img src="{% static 'images/stoneput.jpg' %}" class="opacity-90 hover:opacity-100 object-cover h-full">
+    <img src="{% static 'images/sport_tug.jpeg' %}" class="opacity-90 hover:opacity-100 object-cover h-full" id="sportimage">
   </div>
     <div class="flex flex-col px-32 py-20 overflow-y-scroll items-center bg-gray-50">
       <div class="my-10 leading-8">
@@ -15,12 +19,12 @@
         </div>
       <div class="w-full h-12 mb-12">
         <ul class="flex flex-row justify-evenly">
-          <li><a class="text-blue-500 hover:text-blue-600 text-xl" href="#caber">Caber Toss</a></li>
-          <li><a class="text-blue-500 hover:text-blue-600 text-xl" href="#stone">Stone Throw<a></li>
-          <li><a class="text-blue-500 hover:text-blue-600 text-xl" href="#wfd">Weight for Distance</a></li>
-          <li><a class="text-blue-500 hover:text-blue-600 text-xl" href="#hammer">Hammer Throw</a></li>
-          <li><a class="text-blue-500 hover:text-blue-600 text-xl" href="#wob">Weight for Height</a></li>
-          <li><a class="text-blue-500 hover:text-blue-600 text-xl" href="#sheaf">Sheaf Toss</a></li>
+          <li><a class="text-blue-500 hover:text-blue-600 text-xl" href="#caber" onclick=caber()>Caber Toss</a></li>
+          <li><a class="text-blue-500 hover:text-blue-600 text-xl" href="#stone" onclick=stoneput()>Stone Throw<a></li>
+          <li><a class="text-blue-500 hover:text-blue-600 text-xl" href="#wfd" onclick=wfd()>Weight for Distance</a></li>
+          <li><a class="text-blue-500 hover:text-blue-600 text-xl" href="#hammer" onclick=hammers()>Hammer Throw</a></li>
+          <li><a class="text-blue-500 hover:text-blue-600 text-xl" href="#wob" onclick=wob()>Weight for Height</a></li>
+          <li><a class="text-blue-500 hover:text-blue-600 text-xl" href="#sheaf" onclick=sheaf()>Sheaf Toss</a></li>
         </ul>
       </div>
       <div class="" id="events">
